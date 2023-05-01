@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Monday.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Monday.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackgroundImage="background.jpg"
+    Title="Test"
+    >
+
+    <!--<Shell.Items>
+        <FlyoutItem Title="Menu"
+                    FlyoutDisplayOptions="AsSingleItem"
+                    Icon="menu.png">
+            <Tab>
+                <Tab.Icon>
+                    <FileImageSource File="menu.png" />
+                </Tab.Icon>
+                <ShellContent Title="Page 1"
+                            ContentTemplate="{DataTemplate local:HomePage}" />
+                <ShellContent Title="Page 2"
+                            ContentTemplate="{DataTemplate local:SettingsPage}" />
+            </Tab>
+        </FlyoutItem>
+    </Shell.Items>-->
+    <FlyoutItem Title="Home"
+                Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Profile"
+                Icon="profile.png">
+        <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Settings"
+                Icon="settings.png">
+        <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+    </FlyoutItem>
+    <Shell.ToolbarItems>
+        <ToolbarItem Text="Search"
+                     Priority="0"
+                     IconImageSource="search.png"
+                     Order="Primary"
+                     />
+        <ToolbarItem Text="Refresh"
+                     Priority="1"
+                     IconImageSource="refresh.png"
+                     Order="Primary"
+                    />
+    </Shell.ToolbarItems>
+
+</Shell>
